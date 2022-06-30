@@ -21,6 +21,7 @@ def singleton_class(_class):
     wrapper.instance = None
     return wrapper
 
+
 def singleton_instance(cache_key):
     """
     Make a Singleton isntance (only one instance).
@@ -29,7 +30,13 @@ def singleton_instance(cache_key):
     @singleton_instance(function)
     def function(a):
         pass
+
+    Parameters
+    ----------
+    cache_key : str
+        name of the instance to store once
     """
+
     def inner_function(_function):
         @wraps(_function)
         def wrapper(self, *args, **kwargs):
@@ -40,5 +47,7 @@ def singleton_instance(cache_key):
             instance = _function(self, *args, **kwargs)
             setattr(self, cache_key, instance)
             return instance
+
         return wrapper
+
     return inner_function
