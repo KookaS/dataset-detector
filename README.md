@@ -5,7 +5,10 @@ Deepfake using the custom dataset managed with [scrapper](https://github.com/Koo
 ## installation
 
     python3 -m venv deepfake_env
+    
     source deepfake_env/bin/activate
+
+    pip install -r requirements.txt
 
 ## pep8
 
