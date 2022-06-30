@@ -1,6 +1,7 @@
 """main.py module"""
 from decorators import shutdown_cloud, timing
-import mongodb
+from mongodb import connect, find_images
+# from data import get_scrapper_loader
 
 
 @timing
@@ -9,9 +10,10 @@ def main():
     """
     Entry code
     """
-    client = mongodb.connect()
+    client = connect()
     file_name = "images.csv"
-    mongodb.find_images(client, file_name)
+    find_images(client, file_name)
+    # dataloader = get_scrapper_loader(file_name)
 
 
 if __name__ == "__main__":

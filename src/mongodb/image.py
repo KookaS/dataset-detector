@@ -32,3 +32,4 @@ def find_images(client: pymongo.MongoClient, file_name: str):
                 image_path, document["origin"], document["path"]
             )
             writer.writerow([absolute_path])  # one line is a list of char
+    print(f"Finished loading the images in {file_name}")
