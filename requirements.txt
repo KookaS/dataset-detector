@@ -1,2 +1,4 @@
 numpy >= 1.23.0
 pylint >= 2.14
+pymongo >= 4.1.1
+python-dotenv >= 0.20.0

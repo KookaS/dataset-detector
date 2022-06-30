@@ -129,3 +129,7 @@ dmypy.json
 .pyre/
 
 deepfake_env/*
+
+*.env
+
+*.csv
